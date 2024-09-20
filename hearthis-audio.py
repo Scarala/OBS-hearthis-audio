@@ -260,7 +260,6 @@ def send_stop_signal():
 
 def stop_ffmpeg_stream():
     global ffmpeg_process
-    global status
     
     if ffmpeg_process is not None:
         try:
@@ -276,7 +275,6 @@ def stop_ffmpeg_stream():
 def stream_to_icecast():
     global streaming_active
     global ffmpeg_process
-    global status
     streaming_active = True
 
     # Start FFmpeg in a separate thread to stream audio
