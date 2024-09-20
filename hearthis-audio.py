@@ -84,8 +84,7 @@ def script_properties():
     # Add buttons to start and stop streaming
     obs.obs_properties_add_button(props, "start_button", "Start/Stop Streaming", button)
     
-    status = obs.obs_properties_add_text(props, "status_info", "Stream is Live!", obs.OBS_TEXT_INFO)
-    obs.obs_property_set_visible(status, False)
+    obs.obs_properties_add_text(props, "info", "Author: Scarala", obs.OBS_TEXT_INFO)
 
     return props
     
