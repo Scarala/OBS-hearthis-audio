@@ -44,8 +44,7 @@ def script_description():
 
 def script_properties():
     props = obs.obs_properties_create()
-    obs.obs_properties_add_button(props,"python_link","Download latest Python", python)
-    
+        
     # FFmpeg Path
     obs.obs_properties_add_button(props,"ffmpeg_link","Download latest ffmpeg", ffmpeg)
     obs.obs_properties_add_path(props, "ffmpeg_path", "FFmpeg Path", obs.OBS_PATH_FILE, "ffmpeg.exe (ffmpeg.exe)", None)
@@ -95,9 +94,6 @@ def ht(props, prop):
         
 def ffmpeg(props, prop):
     weblink("https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip")
-    
-def python(props, prop):
-    weblink("https://www.python.org/downloads/")
     
 def weblink(link):
     webbrowser.open(link)
