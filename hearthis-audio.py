@@ -6,10 +6,12 @@ import os
 import signal
 import webbrowser
 
-###########################################################################
-# Author: Scarala (https://scarala.de)                                    #
-# OBS Studio Python Script for streaming audio only stream to Hearthis.at #
-###########################################################################
+#############################################################################
+# hearthis-audio.py - Version 1.0.0                                         #
+# Github: https://github.com/Scarala/OBS-hearthis-audio                     #
+# Author: Scarala (https://scarala.de)                                      #
+# OBS Studio Python Script for streaming audio only stream to Hearthis.at   #
+#############################################################################
 
 # Icecast Server Details (default values)
 ICECAST_HOST = "streamlive2.hearthis.at"
