@@ -40,7 +40,7 @@ status = ""
 settings_changed = False
 
 def script_description():
-    return "<h2>Hearthis.at Audio Only Stream Script</h2>Audio only Stream Script (icecast2) for Streaming a PC Audio Source to Hearthis.at<br><font color='#cc0000'>Script is for Windows systems Only!</font><br>Open Scriptlog for Script infos and Streamstatus.<br><br>Dependencies:<br>- Python 3.10 or higher<br>- ffmpeg.exe Version 7.x.x or higher."""
+    return "<h2>Hearthis.at Audio Only Stream Script</h2>Audio only Stream Script (icecast2) for Streaming a PC Audio Source to Hearthis.at<br><font color='#cc0000'>Script is for Windows systems Only!</font><br>Open Scriptlog for Script infos and Streamstatus.<br>Detailed instructions on Github: https://github.com/Scarala/OBS-hearthis-audio<br><br>Dependencies:<br>- Python 3.10 or higher<br>- ffmpeg.exe Version 7.x.x or higher."""
 
 def script_properties():
     props = obs.obs_properties_create()
