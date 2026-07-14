@@ -4,10 +4,9 @@ Stream any OBS audio track straight to your [hearthis.at](https://hearthis.at) l
 
 The plugin adds its own dock to OBS Studio (**Docks → Hearthis.at Audio Stream**) with a start/stop button, status indicator, live timer, outgoing bitrate and a true-peak level meter of the track being sent.
 
-<!-- TODO: uncomment once the screenshots exist in docs/
 ![The dock](docs/screenshot-dock.png)
 ![Settings dialog](docs/screenshot-settings.png)
--->
+
 
 ## Features
 
