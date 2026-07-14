@@ -14,7 +14,7 @@ The plugin adds its own dock to OBS Studio (**Docks → Hearthis.at Audio Stream
 - **Send any OBS audio track (1–6)** — pick the track in the settings and route sources to it via *Edit → Advanced Audio Properties* (e.g. music only, without your mic)
 - **True-peak stereo level meter** of the selected track, styled exactly like the OBS mixer meters (follows your OBS theme) — also works while not streaming
 - **MP3 encoding (32–320 kbit/s, default 192)** and **Icecast push** done in-process by OBS's bundled FFmpeg
-- **Stream metadata**: name and description, with optional `#OnAir` / `#Recording` prefixes
+- **Stream metadata**: title and description, with optional `#OnAir` / `#Recording` prefixes
 - **Auto-reconnect** on connection loss (up to 20 attempts, live status in the dock)
 - **Auto start/stop** together with your main OBS stream (optional)
 - Runs happily alongside your normal stream and recording — separate output, separate audio mix
@@ -42,7 +42,7 @@ Tip: `ProgramData` is a hidden folder — just paste the path into the Explorer 
 1. Log in at hearthis.at and open the [live streaming page](https://hearthis.at/live/#audio-only) — it shows your personal **stream user** and **stream password**. (The settings dialog has a button that takes you there.)
 2. In the dock, open **Settings** and enter the stream user and password.
 3. Pick the **audio track** to send and a **bitrate**.
-4. Optional: stream name and description, `#OnAir`/`#Recording` prefix, auto start/stop with the main stream.
+4. Optional: stream title and description, `#OnAir`/`#Recording` prefix, auto start/stop with the main stream.
 5. **Save**, then **Start stream**. Once the indicator shows **LIVE**, your stream is up on hearthis.at.
 
 Which sources are audible on the stream is controlled per track in **Edit → Advanced Audio Properties** — enable the chosen track number for every source that should reach hearthis.at.
