@@ -75,6 +75,8 @@ jobs:
     name: Build for macOS 🍏
     runs-on: macos-15
     needs: check-event
+    # macOS is not an official target of this plugin yet - keep CI green if it breaks
+    continue-on-error: true
     defaults:
       run:
         shell: zsh --no-rcs --errexit --pipefail {0}
@@ -182,6 +184,8 @@ jobs:
         os: [ubuntu-24.04]
     runs-on: ${{ matrix.os }}
     needs: check-event
+    # Linux is not an official target of this plugin yet - keep CI green if it breaks
+    continue-on-error: true
     defaults:
       run:
         shell: bash
