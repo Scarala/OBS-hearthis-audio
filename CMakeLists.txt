@@ -25,12 +25,7 @@ find_path(FFmpeg_INCLUDE_DIR NAMES libavformat/avformat.h)
 find_library(FFmpeg_avformat_LIBRARY NAMES avformat)
 find_library(FFmpeg_avcodec_LIBRARY NAMES avcodec)
 find_library(FFmpeg_avutil_LIBRARY NAMES avutil)
-if(
-  NOT FFmpeg_INCLUDE_DIR
-  OR NOT FFmpeg_avformat_LIBRARY
-  OR NOT FFmpeg_avcodec_LIBRARY
-  OR NOT FFmpeg_avutil_LIBRARY
-)
+if(NOT FFmpeg_INCLUDE_DIR OR NOT FFmpeg_avformat_LIBRARY OR NOT FFmpeg_avcodec_LIBRARY OR NOT FFmpeg_avutil_LIBRARY)
   message(FATAL_ERROR "FFmpeg (avformat/avcodec/avutil) not found in CMAKE_PREFIX_PATH")
 endif()
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE "${FFmpeg_INCLUDE_DIR}")

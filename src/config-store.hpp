@@ -27,8 +27,8 @@ struct HearthisConfig {
 	QString description;
 	bool tagOnAir = false;
 	bool tagRecording = false;
-	int track = 1;     // 1..MAX_AUDIO_MIXES
-	int bitrate = 192; // kbit/s
+	int track = 1;          // 1..MAX_AUDIO_MIXES
+	int bitrate = 192;      // kbit/s
 	bool autoStart = false; // start/stop the Hearthis stream together with the OBS stream
 	QString server = QStringLiteral("streamlive2.hearthis.at");
 	int port = 8080;
@@ -42,4 +42,4 @@ struct HearthisConfig {
 namespace ConfigStore {
 HearthisConfig load();
 void save(const HearthisConfig &config);
-}
+} // namespace ConfigStore

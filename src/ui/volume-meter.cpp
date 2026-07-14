@@ -307,8 +307,7 @@ void VolumeMeter::calculateBallistics(uint64_t ts, qreal timeSinceLastRedraw)
 			displayPeak[ch] = currentPeak[ch];
 		} else {
 			float decay = float(peakDecayRate * timeSinceLastRedraw);
-			displayPeak[ch] =
-				std::clamp(displayPeak[ch] - decay, std::min(currentPeak[ch], 0.f), 0.f);
+			displayPeak[ch] = std::clamp(displayPeak[ch] - decay, std::min(currentPeak[ch], 0.f), 0.f);
 		}
 
 		if (currentPeak[ch] >= displayPeakHold[ch] || !std::isfinite(displayPeakHold[ch])) {
@@ -326,8 +325,7 @@ void VolumeMeter::calculateBallistics(uint64_t ts, qreal timeSinceLastRedraw)
 			displayInputPeakHold[ch] = currentInputPeak[ch];
 			displayInputPeakHoldLastUpdateTime[ch] = ts;
 		} else {
-			qreal timeSinceLastPeak =
-				(uint64_t)(ts - displayInputPeakHoldLastUpdateTime[ch]) * 0.000000001;
+			qreal timeSinceLastPeak = (uint64_t)(ts - displayInputPeakHoldLastUpdateTime[ch]) * 0.000000001;
 			if (timeSinceLastPeak > inputPeakHoldDuration) {
 				displayInputPeakHold[ch] = currentInputPeak[ch];
 				displayInputPeakHoldLastUpdateTime[ch] = ts;
@@ -339,8 +337,7 @@ void VolumeMeter::calculateBallistics(uint64_t ts, qreal timeSinceLastRedraw)
 		} else {
 			float attack = float((currentMagnitude[ch] - displayMagnitude[ch]) *
 					     (timeSinceLastRedraw / magnitudeIntegrationTime) * 0.99);
-			displayMagnitude[ch] =
-				std::clamp(displayMagnitude[ch] + attack, (float)minimumLevel, 0.f);
+			displayMagnitude[ch] = std::clamp(displayMagnitude[ch] + attack, (float)minimumLevel, 0.f);
 		}
 	}
 }
@@ -558,8 +555,7 @@ void VolumeMeter::resizeEvent(QResizeEvent *event)
 
 void VolumeMeter::changeEvent(QEvent *e)
 {
-	if (e->type() == QEvent::StyleChange || e->type() == QEvent::FontChange ||
-	    e->type() == QEvent::PaletteChange) {
+	if (e->type() == QEvent::StyleChange || e->type() == QEvent::FontChange || e->type() == QEvent::PaletteChange) {
 		updateTickLabelTokenSize();
 		updateBackgroundCache(true);
 		doLayout();

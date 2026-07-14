@@ -52,8 +52,7 @@ void StreamController::applyState(StreamState state, const QString &message)
 
 void StreamController::postState(StreamState state, const QString &message)
 {
-	QMetaObject::invokeMethod(
-		this, [this, state, message]() { applyState(state, message); }, Qt::QueuedConnection);
+	QMetaObject::invokeMethod(this, [this, state, message]() { applyState(state, message); }, Qt::QueuedConnection);
 }
 
 void StreamController::start()
@@ -72,8 +71,7 @@ void StreamController::start()
 	releaseOutput();
 
 	const QString url = QStringLiteral("icecast://%1:%2@%3:%4/%5")
-				    .arg(percentEncode(cfg.username), percentEncode(cfg.password),
-					 cfg.server.trimmed())
+				    .arg(percentEncode(cfg.username), percentEncode(cfg.password), cfg.server.trimmed())
 				    .arg(cfg.port)
 				    .arg(cfg.effectiveMount());
 

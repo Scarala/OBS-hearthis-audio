@@ -62,9 +62,8 @@ SettingsDialog::SettingsDialog(QWidget *parent) : QDialog(parent)
 	showPassword->setText(QStringLiteral("👁"));
 	showPassword->setCheckable(true);
 	showPassword->setToolTip(text("Settings.ShowPassword"));
-	connect(showPassword, &QToolButton::toggled, this, [this](bool visible) {
-		passwordEdit->setEchoMode(visible ? QLineEdit::Normal : QLineEdit::Password);
-	});
+	connect(showPassword, &QToolButton::toggled, this,
+		[this](bool visible) { passwordEdit->setEchoMode(visible ? QLineEdit::Normal : QLineEdit::Password); });
 	auto *passwordRow = new QHBoxLayout();
 	passwordRow->setContentsMargins(0, 0, 0, 0);
 	passwordRow->addWidget(passwordEdit, 1);
